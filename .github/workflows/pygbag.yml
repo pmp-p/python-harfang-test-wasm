@@ -12,8 +12,8 @@ jobs:
     - name: Checkout
       run: |
             sudo apt-get install -y ffmpeg pngquant
-            python3 -m pip install git+https://github.com/pygame-web/pygbag
-            python3 -m pygbag --PYBUILD=3.10 --cdn https://pmp-p.github.io/harfang-wasm-wip/0.4/ --template harfang.htmpl --build $GITHUB_WORKSPACE
+            python3 -m pip install git+https://github.com/harfang3d/harfang-wasm
+            python3 -m pygbag --PYBUILD=3.11 --cdn https://harfang.github.io/harfang-wasm/0.4/ --template harfang.tmpl --build $GITHUB_WORKSPACE
 
     - name : "Upload to GitHub pages"
       uses: JamesIves/github-pages-deploy-action@4.1.7
